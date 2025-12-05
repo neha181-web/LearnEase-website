@@ -6,7 +6,7 @@
     <title>Ed-Tech Platform</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="Image/png" href="Images/favicon.ico">
+    <link rel="icon" type="Image/x-icon" href="Images/favicon.ico">
 
 
 </head>
@@ -19,7 +19,13 @@
             <img src="Images/logo.png" alt="LearnEase Logo">
             <span>LearnEase</span>
         </div>
-        <nav>
+
+        <!--Hamburger Icon-->
+        <div class="hamburger" aria-label="Menu" role="button" tabindex="0">
+            &#9776;
+        </div>
+
+        <nav id="navbar">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Courses</a></li>
@@ -34,6 +40,7 @@
     <section class="hero">
         <h2>Learn new skills Anytime, Anywhere</h2>
         <p>Upgrade your skills with our expert courses!</p>
+        <button class="btn" id="openModal">Enroll Now</button>
         <button class="btn">Explore Courses</button>
     </section>
 
@@ -92,6 +99,22 @@
         <button type="submit">Send</button>
     </form>
 </section>
+
+<!-- Enroll Modal -->
+<div id="enrollModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="enrolltitle">
+  <div class="modal-content">
+    <span class="close" aria-label="close">&times;</span>
+    <h2 id="enrolltitle">Sign Up / Enroll</h2>
+    <form id="enrollForm">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="course" placeholder="Course Interested In" required>
+     <button type="submit">Enroll</button>
+    </form>
+  </div>
+</div>
+
+
 <!-- Footer -->
 <footer>
     <p>© 2025 LearnEase. All Rights Reserved.</p>
@@ -100,5 +123,6 @@
         <li><a href="#">Terms</a></li>
     </ul>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
